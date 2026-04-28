@@ -32,4 +32,4 @@ Here is why BirdWARP dominates the Middle East market:
 
 No technical skills required. BirdWARP offers seamless, one-click apps for iOS, Android, macOS, and Windows.
 
-👉 **[Click here to visit the BirdWARP official site, get your plan, and make your first clear WhatsApp call today](https://birdwarp.com )**
+👉 **[Click here to visit the BirdWARP official site, get your plan, and make your first clear WhatsApp call today](https://birdwarp.com/#pricing)**
