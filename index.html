@@ -1,0 +1,542 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+
+    <link rel="stylesheet" href="static/css/all.min.css">
+    <link rel="stylesheet" href="static/css/swiper.min.css">
+
+    <script src="static/js/jquery.slim.min.js"></script>
+
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/bootstrap.min_1.css">
+    <link rel="stylesheet" href="static/css/materialdesignicons.min.css">
+
+    <title>BirdWarp Network - Ultimate Privacy & Unrestricted Access</title>
+
+    <script>
+        (function() {
+            var manualLang = localStorage.getItem('userLang');
+            var browserLang = navigator.language || navigator.userLanguage;
+            var currentPath = window.location.pathname;
+
+            if (!manualLang) {
+                var lang = browserLang.toLowerCase();
+                if (lang.startsWith('ru') && !currentPath.startsWith('/ru')) {
+                    window.location.replace('/ru/');
+                } else if (lang.startsWith('fa') && !currentPath.startsWith('/fa')) {
+                    window.location.replace('/fa/');
+                }
+            }
+        })();
+
+        function switchLanguage(lang) {
+            localStorage.setItem('userLang', lang);
+            if (lang === 'ru') {
+                window.location.href = '/ru/';
+            } else if (lang === 'fa') {
+                window.location.href = '/fa/';
+            } else {
+                window.location.href = '/';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand logo" href="/">
+                <h2 class="logo-dark"><i class="fa fa-globe"></i>&nbsp;BirdWarp Network</h2>
+                <h2 class="logo-light" style="color:#dee2e6;font-weight: 400;"><i class="fa fa-globe"></i>&nbsp;BirdWarp Network</h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-menu">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto navbar-center" id="navbar-navlist">
+                    <li class="nav-item"><a href="/#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="/#services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="/#features" class="nav-link">Privacy</a></li>
+                    <li class="nav-item"><a href="/#pricing" class="nav-link">Pricing</a></li>
+                    <li class="nav-item client">
+                        <a href="#" class="nav-link">Apps</a>
+                        <ol class="title">
+                            <li>
+                                <a href="https://play.google.com/store/apps/details?id=com.github.v2raygg">Android</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/2dust/v2rayN/releases/download/7.21.0/v2rayN-windows-64-desktop.zip">Windows</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/2dust/v2rayN/releases/download/7.21.0/v2rayN-macos-arm64.dmg">MacOS</a>
+                            </li>
+                            <li>
+                                <a href="https://apps.apple.com/us/app/shadowrocket/id932747118">iPhone</a>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+                <a href="https://panel.birdwarp.com/#/login" class="btn btn-sm rounded-pill nav-btn ms-lg-3"><i class="fas fa-sign-in-alt"></i> Login</a>
+
+                <div class="nav-item dropdown ms-lg-3 mt-3 mt-lg-0">
+                    <button class="btn btn-sm rounded-pill nav-btn dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="min-width: 80px;">
+                        <i class="fas fa-language"></i> EN
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item active" href="javascript:void(0)" onclick="switchLanguage('en')">English</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="switchLanguage('ru')">Русский (RU)</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="switchLanguage('fa')">فارسی (FA)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="hero-1 bg-center bg-primary position-relative"
+        style="background-image: url(static/images/hero-g-bg.png);" id="home">
+        <div class="container">
+            <div class="row align-items-center hero-content">
+                <div class="col-lg-5">
+                    <h1 class="text-white display-4 font-weight-bold mb-4 hero-1-title">Unrestricted Access. Absolute Privacy.</h1>
+                    <p class="text-white-70 mb-4"> Next-generation anti-censorship protocols designed to bypass the strictest firewalls. We champion your right to privacy with military-grade encryption and a strict zero-logs policy. Protect your digital footprint and pay 100% anonymously with USDT.</p>
+                    <a class="btn btn-lg btn-light rounded-pill mb-2" href="https://panel.birdwarp.com/#/register"><strong>Get Started Anonymously</strong>
+                        <i class="fa fa-shield-alt" aria-hidden="true"></i></a>
+                </div>
+
+                <div id="carouselExampleIndicators" class="col-lg-6 col-sm-12 mx-auto ms-lg-auto me-lg-0 carousel slide"
+                    data-ride="carousel">
+                    <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+                        <div class="swiper-wrapper"
+                            style="transform: translate3d(-2544px, 0px, 0px); transition-duration: 0ms;">
+                            <div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev"
+                                data-swiper-slide-index="2" style="width: 636px;"><img
+                                    src="static/picture/banner-hulu-3.png" class="d-block w-100"></div>
+                            <div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0"
+                                style="width: 636px;"><img src="static/picture/banner-hbo-1.png" class="d-block w-100">
+                                <p></p>
+                            </div>
+                            <div class="swiper-slide" data-swiper-slide-index="1" style="width: 636px;"><img
+                                    src="static/picture/banner-netflix-1.png" class="d-block w-100">
+                                <p></p>
+                            </div>
+                            <div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next"
+                                data-swiper-slide-index="2" style="width: 636px;"><img
+                                    src="static/picture/banner-hulu-3.png" class="d-block w-100"></div>
+                            <div class="swiper-slide swiper-slide-duplicate swiper-slide-active"
+                                data-swiper-slide-index="0" style="width: 636px;"><img
+                                    src="static/picture/banner-hbo-1.png" class="d-block w-100">
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bottom-shape">
+            <img src="static/picture/hero-1-bottom-shape.png" alt="" class="img-fluid d-block mx-auto">
+        </div>
+    </section>
+    <section class="section" id="services">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-7 text-center">
+                    <h2 class="fw-bold">The Ultimate Tool for Freedom & Security</h2>
+                    <p class="text-muted">Designed specifically to combat network censorship. High-speed access to the open web, anytime, anywhere, while leaving absolutely zero traces behind.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="service-box text-center px-4 py-5 position-relative mb-4">
+                        <div class="service-box-content p-4">
+                            <div class="icon-mono service-icon avatar-md mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-box text-primary">
+                                    <path
+                                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                    </path>
+                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                </svg>
+                            </div>
+                            <h4 class="mb-3 font-size-22">Censorship Resistant</h4>
+                            <p class="text-muted mb-0">Engineered to bypass Deep Packet Inspection (DPI) and strict firewalls. Reclaim your right to an open internet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="service-box text-center px-4 py-5 position-relative mb-4 active">
+                        <div class="service-box-content p-4">
+                            <div class="icon-mono service-icon avatar-md mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-layers text-primary">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                    <polyline points="2 17 12 22 22 17"></polyline>
+                                    <polyline points="2 12 12 17 22 12"></polyline>
+                                </svg>
+                            </div>
+                            <h4 class="mb-3 font-size-22 text-white-90">Cross-Platform</h4>
+                            <p class="text-white mb-0 text-white-90">Secure your entire digital life. Fully compatible with macOS, iOS, Android, Linux, and Windows.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="service-box text-center px-4 py-5 position-relative mb-4">
+                        <div class="service-box-content p-4">
+                            <div class="icon-mono service-icon avatar-md mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-shield text-primary">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="mb-3 font-size-22">Anonymous USDT Payments</h4>
+                            <p class="text-muted mb-0">Protect your financial privacy. We proudly accept USDT for completely secure and untraceable subscriptions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section bg-light" id="features">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-md-5 order-2 order-md-1 mt-md-0 mt-5">
+                    <span class="badge badge-pill badge-primary mb-4">NO-LOGS POLICY</span>
+                    <h2 class="mb-4">Your Data is Yours. We Keep Zero Logs.</h2>
+                    <p class="text-muted mb-5">Privacy isn't a feature; it's a fundamental right. BirdWarp operates strictly under a zero-logs policy. We do not track, collect, or share your browsing history, traffic data, or DNS queries. Your identity remains 100% anonymous.</p>
+                    <a href="https://panel.birdwarp.com/#/register" class="btn btn-primary">Secure Your Connection <svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-arrow-right icon-xs ms-2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg></a>
+                </div>
+                <div class="col-md-6 ms-md-auto order-1 order-md-2">
+                    <div class="position-relative">
+                        <div class="ms-5 features-img">
+                            <img src="static/picture/top-hbo-movies.jpg" alt="Privacy Protection" class="img-fluid d-block mx-auto">
+                        </div>
+                        <img src="static/picture/dot-img.png" alt="" class="dot-img-left">
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center section pb-0">
+                <div class="col-md-6">
+                    <div class="position-relative mb-md-0 mb-5">
+                        <div class="me-5 features-img">
+                            <img src="static/picture/halloween-movies.jpg" alt="Censorship Resistant"
+                                class="img-fluid d-block mx-auto rounded shadow">
+                        </div>
+                        <img src="static/picture/dot-img.png" alt="" class="dot-img-right">
+                    </div>
+                </div>
+                <div class="col-md-5 ms-md-auto">
+                    <span class="badge badge-pill badge-primary mb-4">CENSORSHIP RESISTANT</span>
+                    <h2 class="mb-4">Bypass Firewalls. Protect Your Digital Footprint.</h2>
+                    <p class="text-muted mb-5">BirdWarp tunnels your traffic securely through encrypted relays, masking your real IP address and neutralizing Deep Packet Inspection (DPI). Combined with decentralized USDT payments, your online presence is practically invisible to ISPs and network administrators.</p>
+                    <a href="https://panel.birdwarp.com/#/register" class="btn btn-primary">Pay with Crypto <svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-arrow-right icon-xs ms-2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section bg-gradient-primary">
+        <div class="bg-overlay-img" style="background-image: url(static/images/demos.png);"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center">
+                        <h1 class="text-white mb-4">24/7 Technical Support</h1>
+                        <p class="text-white mb-5 font-size-16">
+                            Experiencing connection blocks or need help setting up your crypto wallet for USDT payments? Contact our privacy-focused consulting team for immediate, discreet assistance.</p>
+                        <a href="https://panel.birdwarp.com"
+                            class="btn btn-lg btn-light fw-bold">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-7 text-center">
+                    <h2 class="fw-bold">Premium Privacy. Transparent Pricing.</h2>
+                    <p class="text-muted">
+                        Invest in your digital freedom. We accept USDT on TRC20/ERC20 networks to guarantee that your subscription cannot be traced back to your real identity.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center mb-4 pricing-tab">
+                        <ul class="nav nav-pills rounded-pill justify-content-center d-inline-block shadow-sm"
+                            id="pricingpills-tab" role="tablist">
+                            <li class="nav-item d-inline-block">
+                                <a class="nav-link rounded-pill active" id="pills-monthly-tab" data-bs-toggle="pill"
+                                    href="#pills-monthly" role="tab" aria-controls="pills-monthly"
+                                    aria-selected="true">Monthly</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="pricingpills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-monthly" role="tabpanel"
+                            aria-labelledby="pills-monthly-tab">
+                            <div class="row mt-5">
+                                <div class="col-12 col-md-4 col-lg-4">
+                                    <div class="pricing shadow rounded-lg">
+                                        <div class="pricing-title">
+                                           Basic 100G Plan
+                                        </div>
+                                        <div class="pricing-padding">
+                                            <div class="pricing-price">
+                                                <div>$1.80</div>
+                                                <div>/ mo</div>
+                                            </div>
+                                            <div class="pricing-details">
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">100GB Data Transfer</div>
+                                                </div>
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">3 Concurrent Devices</div>
+                                                </div>
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">Standard Global Nodes</div>
+                                                </div>
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">USDT Supported</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-cta go-to-buy-page">
+                                            <a style="border-radius:0 0 14px 14px; background:#3c2299; color:#fff;"
+                                                href="https://panel.birdwarp.com/#/plan/1">Subscribe with Crypto</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-4">
+                                    <div class="pricing shadow rounded-lg">
+                                        <div class="pricing-title">
+                                           Standard 300G Plan
+                                        </div>
+                                        <div class="pricing-padding">
+                                            <div class="pricing-price">
+                                                <div>$4.00</div>
+                                                <div>/ mo</div>
+                                            </div>
+                                            <div class="pricing-details">
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">300GB Data Transfer</div>
+                                                </div>
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">5 Concurrent Devices</div>
+                                                </div>
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">DPI-Bypass Nodes</div>
+                                                </div>
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">USDT Supported</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-cta go-to-buy-page">
+                                            <a style="border-radius:0 0 14px 14px; background:#3c2299; color:#fff;"
+                                                href="https://panel.birdwarp.com/#/plan/2">Subscribe with Crypto</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-4">
+                                    <div class="pricing shadow rounded-lg">
+                                        <div class="pricing-title">
+                                           Premium 800G Plan
+                                        </div>
+                                        <div class="pricing-padding">
+                                            <div class="pricing-price">
+                                                <div>$10.00</div>
+                                                <div>/ mo</div>
+                                            </div>
+                                            <div class="pricing-details">
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">800GB Data Transfer</div>
+                                                </div>
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">9 Concurrent Devices</div>
+                                                </div>
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">Exclusive Intranet Links</div>
+                                                </div>
+                                                <div class="pricing-item">
+                                                    <div
+                                                        style="width:25px; height:25px;line-height: 20px;color:#3c2299;">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="pricing-item-label">USDT Supported</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-cta go-to-buy-page">
+                                            <a style="border-radius:0 0 14px 14px; background:#3c2299; color:#fff;"
+                                                href="https://panel.birdwarp.com/#/plan/3">Subscribe with Crypto</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="bg-overlay-img" style="background-image: url(static/images/footer-bg.png);">
+                </div>
+                <div class="col-lg-5">
+                    <div class="mb-4">
+                        <a href="#">
+                            <h2 class="logo-dark"><i class="fa fa-globe"></i>&nbsp;BirdWarp</h2>
+                        </a>
+                        <p class="text-white-50 mt-4 mb-1" style="font-size: 1rem;line-height: 1.6rem;">
+                            Dedicated to providing censorship-resistant, highly encrypted network proxy services. Secure your data and pay anonymously.</p>
+                        <p style="font-size: 0.8rem;line-height: 1.2rem;">We proudly champion the right to privacy and the open internet. Defeat firewalls, leave no logs, and reclaim your digital freedom today.</p>
+                        <p class="text-white-50 mb-0" style="font-size: 0.8rem!important;">
+                            Powered by
+                            <a href="/staff.html" data-bs-original-title="" title="">BirdWARP Network</a>
+                            ©
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-7 d-none d-sm-none d-md-none d-lg-block">
+                    <div class="row">
+                        <div class="col-lg-3 col-6"></div>
+                        <div class="col-lg-3 col-6"></div>
+                        <div class="col-lg-3 col-6">
+                            <div class="mt-4 mt-lg-0">
+                                <h4 class="text-white font-size-18 mb-3 text-end">Home</h4>
+                                <ul class="list-unstyled footer-sub-menu">
+                                    <li class="text-end"><a href="https://panel.birdwarp.com/#/plan" class="footer-link">Store</a></li>
+                                    <li class="text-end"><a href="https://panel.birdwarp.com/#/node" class="footer-link">Node List</a>
+                                    </li>
+                                    <li class="text-end"><a href="https://panel.birdwarp.com/#/invite" class="footer-link">Affiliate</a>
+                                    </li>
+                                    <li class="text-end"><a href="https://panel.birdwarp.com/#/profile" class="footer-link">Wallet</a>
+                                    </li>
+                                    <li class="text-end"><a href="https://panel.birdwarp.com/#/plan" class="footer-link">Promo Codes</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <div class="mt-4 mt-lg-0">
+                                <h4 class="text-white font-size-18 mb-3 text-end">Support</h4>
+                                <ul class="list-unstyled footer-sub-menu">
+                                    <li class="text-end"><a
+                                            href="https://panel.birdwarp.com"
+                                            class="footer-link">Contact Us</a>
+                                    </li>
+                                    <li class="text-end"><a href="https://panel.birdwarp.com/#/ticket" class="footer-link">Ticket System</a>
+                                    </li>
+                                    <li class="text-end"><a href="https://panel.birdwarp.com/#/knowledge" class="footer-link">FAQ</a>
+                                    </li>
+                                    <li class="text-end"><a href="https://panel.birdwarp.com/#/knowledge" class="footer-link">Crypto Guide</a>
+                                    </li>
+                                    <li class="text-end"><a href="https://panel.birdwarp.com/#/knowledge" class="footer-link">Tutorials</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/smooth-scroll.polyfills.min.js"></script>
+
+    <script src="static/js/5c95f998e36645deaae79de936803599.js"></script>
+    <script src="static/js/app.js"></script>
+
+    <script src="static/js/swiper.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: true,
+            },
+        })
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"bcee873faa924613be2d4173f3c24af9","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
