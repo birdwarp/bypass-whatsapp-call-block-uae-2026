@@ -17,6 +17,13 @@
 
     <title>BirdWarp Network - Ultimate Privacy & Unrestricted Access</title>
 
+    <link rel="alternate" hreflang="en" href="https://birdwarp.com/index.html" />
+    <link rel="alternate" hreflang="ru" href="https://birdwarp.com/ru/index.html" />
+    <link rel="alternate" hreflang="fa" href="https://birdwarp.com/fa/index.html" />
+    <link rel="alternate" hreflang="vi" href="https://birdwarp.com/vi/index.html" />
+    <link rel="alternate" hreflang="my" href="https://birdwarp.com/my/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://birdwarp.com/index.html" />
+
     <script>
         (function() {
             var manualLang = localStorage.getItem('userLang');
@@ -26,9 +33,13 @@
             if (!manualLang) {
                 var lang = browserLang.toLowerCase();
                 if (lang.startsWith('ru') && !currentPath.startsWith('/ru')) {
-                    window.location.replace('/ru/');
+                    window.location.replace('/ru/index.html');
                 } else if (lang.startsWith('fa') && !currentPath.startsWith('/fa')) {
-                    window.location.replace('/fa/');
+                    window.location.replace('/fa/index.html');
+                } else if (lang.startsWith('vi') && !currentPath.startsWith('/vi')) {
+                    window.location.replace('/vi/index.html');
+                } else if (lang.startsWith('my') && !currentPath.startsWith('/my')) {
+                    window.location.replace('/my/index.html');
                 }
             }
         })();
@@ -36,11 +47,15 @@
         function switchLanguage(lang) {
             localStorage.setItem('userLang', lang);
             if (lang === 'ru') {
-                window.location.href = '/ru/';
+                window.location.href = '/ru/index.html';
             } else if (lang === 'fa') {
-                window.location.href = '/fa/';
+                window.location.href = '/fa/index.html';
+            } else if (lang === 'vi') {
+                window.location.href = '/vi/index.html';
+            } else if (lang === 'my') {
+                window.location.href = '/my/index.html';
             } else {
-                window.location.href = '/';
+                window.location.href = '/index.html';
             }
         }
     </script>
@@ -49,7 +64,7 @@
 <body>
     <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
         <div class="container">
-            <a class="navbar-brand logo" href="/">
+            <a class="navbar-brand logo" href="/index.html">
                 <h2 class="logo-dark"><i class="fa fa-globe"></i>&nbsp;BirdWarp Network</h2>
                 <h2 class="logo-light" style="color:#dee2e6;font-weight: 400;"><i class="fa fa-globe"></i>&nbsp;BirdWarp Network</h2>
             </a>
@@ -65,10 +80,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav ms-auto navbar-center" id="navbar-navlist">
-                    <li class="nav-item"><a href="/#home" class="nav-link active">Home</a></li>
-                    <li class="nav-item"><a href="/#services" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="/#features" class="nav-link">Privacy</a></li>
-                    <li class="nav-item"><a href="/#pricing" class="nav-link">Pricing</a></li>
+                    <li class="nav-item"><a href="/index.html#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="/index.html#services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="/index.html#features" class="nav-link">Privacy</a></li>
+                    <li class="nav-item"><a href="/index.html#pricing" class="nav-link">Pricing</a></li>
                     <li class="nav-item client">
                         <a href="#" class="nav-link">Apps</a>
                         <ol class="title">
@@ -97,6 +112,8 @@
                         <li><a class="dropdown-item active" href="javascript:void(0)" onclick="switchLanguage('en')">English</a></li>
                         <li><a class="dropdown-item" href="javascript:void(0)" onclick="switchLanguage('ru')">Русский (RU)</a></li>
                         <li><a class="dropdown-item" href="javascript:void(0)" onclick="switchLanguage('fa')">فارسی (FA)</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="switchLanguage('vi')">Tiếng Việt (VI)</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="switchLanguage('my')">မြန်မာ (MY)</a></li>
                     </ul>
                 </div>
             </div>
@@ -458,7 +475,7 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="mb-4">
-                        <a href="#">
+                        <a href="/index.html">
                             <h2 class="logo-dark"><i class="fa fa-globe"></i>&nbsp;BirdWarp</h2>
                         </a>
                         <p class="text-white-50 mt-4 mb-1" style="font-size: 1rem;line-height: 1.6rem;">
@@ -473,7 +490,18 @@
                 </div>
                 <div class="col-lg-7 d-none d-sm-none d-md-none d-lg-block">
                     <div class="row">
-                        <div class="col-lg-3 col-6"></div>
+                        <div class="col-lg-3 col-6">
+                            <div class="mt-4 mt-lg-0">
+                                <h4 class="text-white font-size-18 mb-3 text-end">Languages</h4>
+                                <ul class="list-unstyled footer-sub-menu">
+                                    <li class="text-end"><a href="/index.html" class="footer-link">English</a></li>
+                                    <li class="text-end"><a href="/ru/index.html" class="footer-link">Русский (RU)</a></li>
+                                    <li class="text-end"><a href="/fa/index.html" class="footer-link">فارسی (FA)</a></li>
+                                    <li class="text-end"><a href="/vi/index.html" class="footer-link">Tiếng Việt (VI)</a></li>
+                                    <li class="text-end"><a href="/my/index.html" class="footer-link">မြန်မာ (MY)</a></li>
+                                </ul>
+                            </div>
+                        </div>
                         <div class="col-lg-3 col-6"></div>
                         <div class="col-lg-3 col-6">
                             <div class="mt-4 mt-lg-0">
